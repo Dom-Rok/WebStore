@@ -42,24 +42,6 @@ NEXTAUTH_URL=http://localhost:3000
  
 ```  npm run dev ```    
 2.  Open [http://localhost:3000](http://localhost:3000) in your browser.
-    
-
-## 📂 Project Structure
-
-gymbeam-eshop/
-├── app/
-│ 	├── api/ # fakeStroreApi comunication
-			└── auth/                  
-│			└── [...nextauth]/ # NextAuth configuration
-│	├──  login/    
-│	├── products/          # Product listing (protected)
-│	│   └── [id]/          # Product details
-│	└── layout.tsx
-├── components/            
-├── middleware.ts          # Route protection
-├── public/                # Static assets
-
-
 
 
 ## 📱 Pages
