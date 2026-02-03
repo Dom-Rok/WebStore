@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@source "../components/Product"
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #0a0a0a;
+  --background: linear-gradient(180deg,rgba(247, 247, 247, 1) 0%, rgba(215, 215, 215, 1) 50%, rgba(215, 215, 215, 1) 100%); --max-card-width : 250px;
+  --max-card-height : 500px;
+  --primary-color: #ff4100;
+  --primary: #ff4100;
+
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer utilities {
+  .text-primary {
+    color: var(--primary);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+.slideshow-container {
+  @apply flex xl:flex-row flex-col gap-5 bg-blue-500;
+}
+.slideshow-container__header {
+  @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold;
+}
+.slideshow-container__description {
+  @apply text-[27px] font-light mt-5;
+}
+
+.product-card {
+  @apply w-full flex flex-col items-start bg-white;
+}
+.shopping-cart {
+  background: #8c8c8c;
+}
+.shopping-cart:hover {
+  background: var(--primary-color);
+}
+.product-card__title {
+  @apply font-bold text-black overflow-hidden h-[3rem] mb-5 ;
+}
+.product-card__rating {
+ @apply inline-flex font-bold text-gray-400 text-sm pl-[-7px];
+}
+.product-card__rating svg{
+  color: var(--primary-color);
+}
+.product-card__image {
+  @apply  relative object-contain w-full h-full ;
+}
+.product-card__price {
+  @apply font-bold text-sm h-[1.5rem] text-(--primary-color);
+}
+a.active {
+  color: var(--primary-color);
+}
+a:hover {
+  color: var(--primary-color);
+}
+
+
